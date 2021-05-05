@@ -1,0 +1,96 @@
+{
+  "name": "paper-dashboard-react",
+  "version": "1.1.0",
+  "private": true,
+  "homepage": "https://demos.creative-tim.com/paper-dashboard-react/#/dashboard",
+  "dependencies": {
+    "@ckeditor/ckeditor5-build-classic": "^18.0.0",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
+    "@google-cloud/translate": "^5.3.0",
+    "assets": "^3.0.1",
+    "axios": "^0.19.2",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "4.3.1",
+    "chart.js": "2.8.0",
+    "ckeditor4-react": "^1.1.0",
+    "draft-js": "^0.11.4",
+    "fetch-intercept": "^2.3.1",
+    "history": "4.9.0",
+    "jwt-decode": "^2.2.0",
+    "node-sass": "4.12.0",
+    "npm-watch": "^0.6.0",
+    "pdfcrowd": "^4.12.0",
+    "perfect-scrollbar": "1.4.0",
+    "popper.js": "^1.16.1",
+    "react": "16.8.6",
+    "react-autocomplete": "^1.8.1",
+    "react-bootstrap": "^1.0.0",
+    "react-chartjs-2": "2.7.6",
+    "react-dom": "16.8.6",
+    "react-draft-wysiwyg": "^1.14.4",
+    "react-google-charts": "^3.0.15",
+    "react-google-maps": "9.4.5",
+    "react-html-parser": "^2.0.2",
+    "react-icons": "^3.10.0",
+    "react-image": "^2.4.0",
+    "react-modal": "^3.11.2",
+    "react-notification-alert": "0.0.12",
+    "react-onclickoutside": "^6.9.0",
+    "react-router": "5.0.0",
+    "react-router-dom": "5.0.0",
+    "react-script-tag": "^1.1.2",
+    "react-scripts": "3.0.1",
+    "react-select": "^3.1.0",
+    "react-session-api": "^1.1.0",
+    "react-simple-chatbot": "^0.6.1",
+    "react-sortablejs": "^2.0.11",
+    "reactstrap": "8.0.0",
+    "request": "^2.88.2",
+    "scraperapi-sdk": "^1.0.4",
+    "styled-components": "^4.0.0",
+    "tinify": "^1.6.0-beta.2",
+    "xlsx": "^0.15.6"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,jsx"
+    }
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "watch": "npm-watch",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
+    "compile-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css",
+    "minify-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.min.css --output-style compressed",
+    "map-sass": "node-sass src/assets/scss/paper-dashboard.scss src/assets/css/paper-dashboard.css --source-map true"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "optionalDependencies": {
+    "@types/googlemaps": "3.36.2",
+    "@types/markerclustererplus": "2.1.33",
+    "@types/react": "16.8.19",
+    "ajv": "6.10.0",
+    "jquery": "3.4.1",
+    "typescript": "3.4.5"
+  },
+  "devDependencies": {
+    "@editorjs/checklist": "^1.1.0",
+    "@editorjs/editorjs": "^2.17.0",
+    "@editorjs/paragraph": "^2.6.1",
+    "react-editor-js": "^1.5.0"
+  }
+}

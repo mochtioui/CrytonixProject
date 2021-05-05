@@ -1,0 +1,126 @@
+#container-popup:target {
+    visibility: hidden;
+    display: none;
+    opacity: 0;
+}
+@keyframes everything {
+    0% {opacity: 0;}
+    95% {opacity: 0;}
+    100% {opacity: 0.9;}
+}
+#container-popup {
+    position: relative;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, .67);
+    z-index: 999;
+    animation-name: everything;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    animation-duration: 2s;
+    animation-direction: forwards;
+}
+
+.popup {
+    width: 320px;
+    height: 420px;
+    background: #1a1a1a;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    padding: 5px 0 0;
+    overflow: hidden;
+}
+
+@media only screen and (min-width: 768px) {
+    .popup {
+        width: 500px;
+        padding: 0;
+    }
+}
+.pheader {
+    font: 600 2em sans-serif;
+    line-height: 1;
+    padding: 4% 5% 0;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+}
+
+.popup .close {
+    position: absolute;
+    top: 0;
+    right: 1%;
+    transition: all 200ms;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #aaa;
+}
+
+.popup .close:hover {
+    color: #aa0000;
+}
+
+.pbody {
+    font: 0.8em sans-serif;
+    padding: 0 5% 1%;
+    color: #f1f1f1;
+    text-align: center;
+}
+
+.pbutton {
+    color: #eee;
+    background: #cc0000;
+    float: right;
+    margin: 2% 5%;
+    padding: 0.5em 1em 0.25em;
+    border-bottom: 0.2em solid #800000;
+    font: 600 1.6em sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.065em;
+    border-radius: 6px;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+.pbutton:hover {
+    color: #fff;
+    border-bottom: 0.2em solid #aa0000;
+}
+
+.bounceIn {
+    animation-name: bounceIn;
+}
+
+.bounceIn {
+    animation-delay: 2s;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    visibility: visible !important;
+}
+
+@keyframes bounceIn{
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

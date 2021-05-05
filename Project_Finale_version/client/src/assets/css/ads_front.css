@@ -1,0 +1,856 @@
+#banner {
+    height: 300px;
+    width: 300px;
+
+    overflow: hidden;
+    position : absolute;
+    margin-left: +1150px;
+}
+#banner a {
+    height: 100%;
+    width: 100%;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    animation: 1s fadein ease-in-out;
+    animation-fill-mode: forwards;
+}
+#target {
+    background: url(http://base.webdesignforyou.net/banner/target.png) center center no-repeat;
+    background-size: 100% auto;
+    margin: 0 auto;
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    margin-top: -100px;
+    margin-left: -100px;
+    animation: 20s roty infinite linear;
+}
+#product {
+    margin: 30px auto 0 auto;
+    display: block;
+    z-index: 10;
+    width: 150px;
+    position: relative;
+    opacity: 0;
+    animation: 1s growin ease-in-out 1s;
+    animation-fill-mode: forwards;
+}
+#button {
+    color: #fff;
+    padding: 8px 15px 8px 15px;
+    font-family: 'Roboto Slab';
+    font-weight: 700;
+    font-size: 18px;
+    background: #3ba7d1;
+    display: inline-block;
+    margin: 10px 0 0 0;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
+    opacity: 0;
+    animation: 1s fadein ease-in-out 2s;
+    animation-fill-mode: forwards;
+}
+#sale {
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    z-index: 10;
+    bottom: -0px;
+}
+#sale-text {
+    color: #fff;
+    font-family: 'Satisfy';
+
+    font-size: 20px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    opacity: 2;
+    animation: 1s fadein ease-in-out 5.0s;
+    animation-fill-mode: forwards;
+
+}
+#badge {
+    box-sizing: border-box;
+    color: #fff;
+    padding: 10px 0 0 0;
+    font-weight: 800;
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    text-align: center;
+    width: 70px;
+    height: 70px;
+    background: #ff9900;
+    border: solid 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    border-radius: 50%;
+    transform: rotate(345deg);
+    animation: 1s fadein ease-in-out;
+    -webkit-transition-delay: 6s;
+    transition-delay: 6s;
+    position: absolute;
+    opacity: 0;
+    transform: rotate(0deg);
+    top: 0px;
+    right: 0px;
+    z-index: 10;
+    animation: 1s rollin ease-in-out 2.5s;
+    animation-fill-mode: forwards;
+}
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes roty {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rollin {
+    0% {
+        opacity: 0;
+        transform: rotate(0deg);
+        top: 0px;
+        right: 0px;
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(345deg);
+        top: 40px;
+        right: 40px;
+    }
+}
+@keyframes growin {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/*////////////////////////////ad stuff*/
+
+#banner-ad{
+    display:block;
+    position : absolute;
+    z-index:10;
+    width:100%;
+    overflow:hidden;
+    font-family:myriad-pro,'Myriad Pro','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style:normal;
+    font-size: 16px;
+    line-height: 21px;
+    max-width:2500px;
+    margin-left:auto;
+    margin-right:auto;
+
+}
+
+#banner-ad .inner-content{
+    position:relative;
+    overflow:visible;
+    padding:10px 40px 10px 10px;
+    display:-webkit-flex;
+    display:flex;
+    -webkit-flex:0 0 100%;
+    flex:0 0 100%;
+    max-width:100%;
+    -webkit-flex-direction:row;
+    flex-direction:row;
+    -webkit-flex-wrap:wrap;
+    flex-wrap:wrap;
+    -webkit-justify-content:flex-start;
+    justify-content:flex-start;
+    -webkit-align-items:center;
+    align-items:center;
+    margin-left:auto;
+    margin-right:auto;
+    width:100%;
+    -webkit-transition:all .2s ease-out 0s;
+    transition:all .2s ease-out 0s
+}
+#banner-ad .inner-content p {padding:0; margin:0;}
+#banner-ad .inner-content h4 {margin:0 0 5px 0;}
+
+@media only screen and (min-width: 768px){
+    #banner-ad .inner-content{
+        -webkit-flex:0 0 auto;
+        flex:0 0 auto;
+        max-width:none;
+        -webkit-justify-content:center;
+        justify-content:center;
+        -webkit-flex-wrap:nowrap;
+        flex-wrap:nowrap;
+        padding:20px 40px;
+        max-width:1200px
+    }
+}
+
+#banner-ad .inner-content .close-ad{
+    display:block;
+    position:absolute;
+    top:0;
+    right:0;
+    height:40px;
+    width:40px;
+    cursor:pointer;
+    -webkit-transition:all .2s ease-out 0s;
+    transition:all .2s ease-out 0s
+}
+
+#banner-ad .inner-content .close-ad:before,
+#banner-ad .inner-content .close-ad:after{
+    display:block;
+    position:absolute;
+    top:15%;
+    left:50%;
+    content:'';
+    height:30px;
+    width:2px;
+    background-color:#333333;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%)
+}
+
+#banner-ad .inner-content .close-ad:before{
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg)
+}
+
+#banner-ad .inner-content .close-ad:after{
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg)
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad .inner-content .close-ad{
+        height:100%;
+        width:73px
+    }
+
+    #banner-ad .inner-content .close-ad:before,#banner-ad .inner-content .close-ad:after{
+        position:absolute;
+        top:30%;
+        left:50%
+    }
+
+
+}
+
+#banner-ad.world-2018-ad{
+    background-color:green ;
+    color:#fff;
+
+}
+
+#banner-ad.world-2018-ad .line-divider{
+    display:block;
+    position:relative;
+    overflow:visible;
+    width:77px;
+    height:1px;
+    background-color:#D9232E;
+    margin-top:17px
+}
+
+#banner-ad.world-2018-ad .line-divider:before,
+#banner-ad.world-2018-ad .line-divider:after{
+    display:block;
+    position:absolute;
+    content:'';
+    width:37.5px;
+    height:1px;
+    background-color:#D9232E
+}
+
+#banner-ad.world-2018-ad .line-divider:before{
+    top:-12px;
+    -webkit-transform:translateX(-10%);
+    transform:translateX(-10%);
+    right:0
+}
+
+#banner-ad.world-2018-ad .line-divider:after{
+    top:-6px;
+    -webkit-transform:translateX(15%);
+    transform:translateX(15%);
+    left:0
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group{
+    display:block;
+    position:relative;
+    overflow:visible;
+    width: 0px;
+    height:1px;
+    background-color:#FFFFFF;
+    margin-top:26px
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:before,
+#banner-ad.world-2018-ad .line-decoration .line-group:after{
+    display:block;
+    position:absolute;
+    content:'';
+    left:0;
+    width:250px;
+    height:1px;
+    background-color:#FFFFFF
+}
+
+
+#banner-ad.world-2018-ad .line-decoration .line-group:before{
+    top:-18px;
+    -webkit-transform:translateX(-20%);
+    transform:translateX(-20%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:after{
+    top:-9px;
+    -webkit-transform:translateX(-15%);
+    transform:translateX(-15%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:nth-child(2){
+    -webkit-transform:translateX(-15%);
+    transform:translateX(-15%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:nth-child(2):before{
+    -webkit-transform:translateX(-3%);
+    transform:translateX(-3%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:nth-child(2):after{
+    -webkit-transform:translateX(7%);
+    transform:translateX(7%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:nth-child(3){
+    -webkit-transform:translateX(-20%);
+    transform:translateX(-20%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:nth-child(3):before{
+    -webkit-transform:translateX(-5%);
+    transform:translateX(-5%)
+}
+
+#banner-ad.world-2018-ad .line-decoration .line-group:nth-child(3):after{
+    -webkit-transform:translateX(-10%);
+    transform:translateX(-10%)
+}
+
+#banner-ad.world-2018-ad .line-decoration.red .line-group{
+    background-color:#D9232E
+}
+
+#banner-ad.world-2018-ad .line-decoration.red .line-group:before,#banner-ad.world-2018-ad .line-decoration.red .line-group:after{
+    background-color:#D9232E
+}
+
+#banner-ad.world-2018-ad .line-decoration.orange .line-group{
+    background-color:#FF9100
+}
+
+#banner-ad.world-2018-ad .line-decoration.orange .line-group:before,#banner-ad.world-2018-ad .line-decoration.orange .line-group:after{
+    background-color:#FF9100
+}
+
+#banner-ad.world-2018-ad .line-decoration.green .line-group{
+    background-color:#68AA00
+}
+
+#banner-ad.world-2018-ad .line-decoration.green .line-group:before,#banner-ad.world-2018-ad .line-decoration.green .line-group:after{
+    background-color:#68AA00
+}
+
+#banner-ad.world-2018-ad .line-decoration.blue .line-group{
+    background-color:#4789A3
+}
+
+#banner-ad.world-2018-ad .line-decoration.blue .line-group:before,#banner-ad.world-2018-ad .line-decoration.blue .line-group:after{
+    background-color:#4789A3
+}
+
+#banner-ad.world-2018-ad .line-decoration.navy-blue .line-group{
+    background-color:#11566F
+}
+
+#banner-ad.world-2018-ad .line-decoration.navy-blue .line-group:before,#banner-ad.world-2018-ad .line-decoration.navy-blue .line-group:after{
+    background-color:#11566F
+}
+
+#banner-ad.world-2018-ad .logo{
+    display:none
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad.world-2018-ad .logo{
+        display:-webkit-flex;
+        display:flex;
+        max-height:40px;
+        margin:0;
+        margin-right:10px
+    }
+
+
+}
+
+@media only screen and (min-width: 980px){
+
+    #banner-ad.world-2018-ad .logo{
+        max-height:50px ;
+
+    }
+
+
+}
+
+#banner-ad.world-2018-ad .ad-copy{
+    position:relative;
+    padding:0 10px 10px 0
+}
+
+#banner-ad.world-2018-ad .ad-copy>h4{
+    font-family:myriad-pro,'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    font-weight:600;
+    font-size:16px;
+    line-height:20px;
+    padding:0;
+    margin:0 0 5px 0
+}
+
+#banner-ad.world-2018-ad .ad-copy>p{
+    font-family:myriad-pro,'Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    color:#CCCCCC;
+    font-size:14px;
+    line-height:20px;
+    padding:0;
+    margin:0
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad.world-2018-ad .ad-copy{
+        padding:0 20px 0 10px
+    }
+
+    #banner-ad.world-2018-ad .ad-copy>h4{
+        font-size:18px;
+        line-height:24px
+    }
+
+    #banner-ad.world-2018-ad .ad-copy>p{
+        font-size:16px;
+        line-height:24px
+    }
+
+
+}
+
+@media only screen and (min-width: 980px){
+    #banner-ad.world-2018-ad .ad-copy{
+        padding-right:30px
+    }
+
+
+}
+
+#banner-ad.world-2018-ad .close-ad:hover{
+    background-color:rgba(0,0,0,0.3)
+}
+
+#banner-ad.world-2018-ad .close-ad:before,#banner-ad.world-2018-ad .close-ad:after{
+    background-color:#CCCCCC
+}
+
+#banner-ad.world-2018-ad .button{
+    min-width:150px;
+    margin:0
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad.world-2018-ad .button{
+        min-width:20px;
+        margin-right:15px
+    }
+}
+
+#banner-ad.world-2018-ad .line-divider{
+    -webkit-transform:rotate(-60deg);
+    transform:rotate(-60deg);
+    margin-bottom:10px
+}
+
+@media only screen and (max-width: 767px){
+    #banner-ad.world-2018-ad .line-divider{
+        display:none
+    }
+}
+
+#banner-ad.world-2018-ad .line-decoration{
+    position:absolute;
+    z-index:-1
+}
+
+#banner-ad.world-2018-ad .line-decoration.left-top{
+    -webkit-transform:rotate(-30deg);
+    transform:rotate(-30deg);
+    right:50%;
+    top:-50%
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad.world-2018-ad .line-decoration.left-top{
+        right:80%;
+        top:50%;
+        margin-top:-80px;
+        margin-right:40px;
+    }
+}
+
+#banner-ad.world-2018-ad .line-decoration.left-bottom{
+    -webkit-transform:rotate(60deg);
+    transform:rotate(60deg);
+    right:70%;
+    top:50%;
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad.world-2018-ad .line-decoration.left-bottom{
+        right:80%;
+        top:0;
+        margin-right:50px;
+    }
+}
+
+#banner-ad.world-2018-ad .line-decoration.right{
+    -webkit-transform:rotate(55deg);
+    transform:rotate(55deg);
+    left:70%;
+    top:125%
+}
+
+@media only screen and (min-width: 768px){
+    #banner-ad.world-2018-ad .line-decoration.right{
+        -webkit-transform:rotate(60deg);
+        transform:rotate(60deg);
+        left:80%;
+        top:0;
+        margin-left:-50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*////////////////////////////button stuff*/
+.button{
+    display:inline-block;
+    *display:inline;
+    position:relative;
+    height:auto;
+    overflow:hidden;
+    margin-right:15px;
+    padding:1em 2.5em;
+    cursor:pointer;
+    box-shadow:1px 1px 3px rgba(0,0,0,0.2);
+    -webkit-transition:all .2s ease-out 0s;
+    transition:all .2s ease-out 0s
+}
+.button.inactive{
+    cursor:default;
+    background-color:#AAAAAA !important;
+    color:rgba(255,255,255,0.65) !important;
+    box-shadow:none
+
+}
+.button.inactive:before,.button.inactive:after{
+    background-color:rgba(255,255,255,0.7) !important
+}
+.button:last-child{
+    margin-right:0px
+}
+.button.arrow{
+    padding-right:3.5em;
+    padding-left:2em
+
+}
+.button.arrow:before,.button.arrow:after{
+    display:block;
+    position:absolute;
+    z-index:1;
+    content:'';
+    right:15px;
+    top:50%;
+    height:10px;
+    width:2px;
+    background-color:#ffffff;
+    -webkit-transition:all .2s ease-out 0s;
+    transition:all .2s ease-out 0s
+}
+.button.arrow:before{
+
+    margin-top:-8px;
+    -webkit-transform:rotate(-45deg);
+    transform:rotate(-45deg)
+}
+.button.arrow:after{
+
+    margin-top:-2px;
+    -webkit-transform:rotate(45deg);
+    transform:rotate(45deg)
+}
+.button.red{
+
+    background-color:#D9232E
+}
+.button.red:hover{
+
+    background-color:#ea2b37
+}
+.button.red:active{
+
+    background-color:#bd252e
+}
+.button.orange{
+
+    background-color:#FF9100
+}
+.button.orange:hover{
+
+    background-color:#ff9c1a
+}
+.button.orange:active{
+
+    background-color:#e08206
+}
+.button.green{
+
+    background-color:#68AA00
+}
+.button.green:hover{
+
+    background-color:#78c300
+}
+.button.green:active{
+
+    background-color:#588d04
+}
+.button.blue{
+
+    background-color:#4789A3
+}
+.button.blue:hover{
+
+    background-color:#449dc0
+}
+.button.blue:active{
+
+    background-color:#44788c
+}
+.button.navy{
+
+    background-color:#11566F
+}
+.button.navy:hover{
+
+    background-color:#0d6b8d
+}
+.button.navy:active{
+
+    background-color:#104456
+}
+.button.white{
+
+    background-color:#ffffff;
+    color:#333333
+}
+.button.white:hover{
+
+    background-color:#f2f2f2;
+    color:#333333
+}
+.button.white:active{
+
+    background-color:#f2f2f2;
+    color:#333333
+}
+.text-white .button.white{
+
+    background-color:#ffffff;
+    color:#333333
+}
+.text-white .button.white:hover{
+
+    background-color:#f2f2f2;
+    color:#333333
+}
+.text-white .button.white:active{
+
+    background-color:#f2f2f2;
+    color:#333333
+}
+.button.white.arrow:before,.button.white.arrow:after{
+
+    background-color:#333333
+}
+.button.light-gray{
+
+    background-color:#f2f2f2;
+    color:#333333
+}
+.button.light-gray:hover{
+
+    background-color:#f2f2f2;
+    color:#333333
+}
+.button.light-gray:active{
+
+    background-color:#EEEEEE;
+    color:#333333
+}
+.button.light-gray.arrow:before,.button.light-gray.arrow:after{
+
+    background-color:#333333
+}
+.button.gray{
+
+    background-color:#999999
+}
+.button.gray:hover{
+
+    background-color:#AAAAAA
+}
+.button.gray:active{
+
+    background-color:#555555
+}
+.button.dark-gray{
+
+    background-color:#555555
+}
+.button.dark-gray:hover{
+
+    background-color:#777777
+}
+.button.dark-gray:active{
+
+    background-color:#444444
+}
+.button.black{
+
+    background-color:#333333
+}
+.button.black:hover{
+
+    background-color:#555555
+}
+.button.black:active{
+
+    background-color:#222222
+}
+a.button,.button{
+
+    font-family:myriad-pro,'Myriad Pro','Open Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-style:normal;
+    font-weight:600;
+    color:#ffffff;
+    text-align:center;
+    font-size:16px;
+    line-height:16px;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    text-decoration:none!important
+}
+a.button.small,.button.small{
+
+    font-size:14px;
+    line-height:16px
+}
+a.button.medium,.button.medium{
+
+    font-size:16px;
+    line-height:18px
+}
+a.button.large,.button.large{
+
+    font-size:18px;
+    line-height:20px
+}
+a.button.white,.button.white,a.button.light-gray,.button.light-gray{
+
+    color:#333333
+}
+a.button.arrow,.button.arrow{
+
+    text-align:left
+}
+a.button.outline.red,.button.outline.red{
+
+    color:#D9232E
+}
+a.button.outline.orange,.button.outline.orange{
+
+    color:#FF9100
+}
+a.button.outline.green,.button.outline.green{
+
+    color:#68AA00
+}
+a.button.outline.blue,.button.outline.blue{
+
+    color:#4789A3
+}
+a.button.outline.navy,.button.outline.navy{
+
+    color:#11566F
+}
+a.button.outline.white,.button.outline.white{
+
+    color:#ffffff
+}
+a.button.outline.light-gray,.button.outline.light-gray{
+
+    color:#f2f2f2
+}
+a.button.outline.gray,.button.outline.gray{
+
+    color:#999999
+}
+a.button.outline.dark-gray,.button.outline.dark-gray{
+
+    color:#555555
+}
+a.button.outline.black,.button.outline.black{
+
+    color:#333333
+}
+a.button.outline:hover.red,.button.outline:hover.red,a.button.outline:hover.orange,.button.outline:hover.orange,a.button.outline:hover.green,.button.outline:hover.green,a.button.outline:hover.blue,.button.outline:hover.blue,a.button.outline:hover.navy,.button.outline:hover.navy,a.button.outline:hover.gray,.button.outline:hover.gray,a.button.outline:hover.dark-gray,.button.outline:hover.dark-gray,a.button.outline:hover.black,.button.outline:hover.black{
+
+    color:#ffffff
+}
+a.button.outline:hover.white,.button.outline:hover.white,a.button.outline:hover.light-gray,.button.outline:hover.light-gray{
+
+    color:#333333
+}

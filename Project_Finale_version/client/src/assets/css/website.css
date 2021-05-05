@@ -1,0 +1,103 @@
+/* translator */
+
+.header-top a {
+    display: block;
+    padding: 5px;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+.content_trans {
+    position: relative;
+    z-index: 9999;
+}
+
+.content_trans .trans_header {
+    display: flex;
+    align-items: center;
+}
+.content_trans .select_language .btn-toggle {
+    border: 1px solid #afafaf;
+    padding: 10px 15px;
+    background: #FFFFFF;
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content_trans .trans_header .revers-icon {
+    width: 50px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.content_trans .trans_header .btn_trans {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 23px;
+    width: 41px;
+    height: 41px;
+    border-radius: 4px;
+    background: #ffa315;
+    cursor: pointer;
+}
+
+.content_trans .list_language {
+    display: flex;
+    flex-wrap: wrap;
+    width: 360px;
+    justify-content: space-between;
+    background: #FFFFFF;
+    padding: 15px;
+    border-radius: 0
+}
+
+.content_trans .list_language .item_language {
+    width: 33%;
+    padding: 10px 5px;
+    cursor: pointer;
+}
+
+.content_trans .list_language .item_language:hover, .content_trans .list_language .item_language.active {
+    background: #d8d8d8;
+}
+
+.content_trans .dropdown .dropdown-menu:after {
+    display: none;
+}
+
+.content_trans .dropdown .dropdown-menu:before {
+    display: none;
+}
+
+.content_trans .trans_text {
+    margin-top: 15px;
+    padding: 15px;
+    border: 2px solid #E1E1E1;
+    min-height: 200px;
+}
+
+    /* editor text */
+
+.editor_text {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.editor_text .btn_translate {
+    display: inline-block;
+    background: #ffa315;
+    border-radius: 4px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.editor_text .toggle_btn {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+}
